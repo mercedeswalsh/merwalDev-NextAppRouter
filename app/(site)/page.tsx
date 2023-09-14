@@ -8,7 +8,7 @@ export default async function Home() {
   return (
     <div>
       <h1 className="text-7xl font-extrabold">hi! i&apos;m
-        <span className="bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent"> mercedes</span>
+        <span className="bg-gradient-to-r from-pink-300 via-pink-500 to-green-300 bg-clip-text text-transparent"> mercedes</span>
       </h1>
       <p className="mt-3 text-xl text-gray-600">welcome to the party! let's go!</p>
       <h2 className="mt-24 font-bold text-gray-700 text-3xl">all projects</h2>
@@ -24,7 +24,7 @@ export default async function Home() {
               className="object-cover rounded-lg border border-gray-500"
             />
           )}
-          <div className="mt-2 font-extrabold bg-gradient-to-r from-orange-400 via-red-500 to-purple-600 bg-clip-text text-transparent">
+          <div className="mt-2 font-extrabold bg-gradient-to-r from-pink-300 via-pink-500 to-green-300 bg-clip-text text-transparent">
             {project.name}
           </div>
         </Link>
