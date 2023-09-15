@@ -29,7 +29,7 @@ export default async function RootLayout({
         </header>
         <main className="py-20">{children}</main>
       </body>
-      <footer className="flex items-center gap-5 justify-between bg-white rounded-lg shadow dark:bg-gray-900 m-4">
+      <footer className="flex items-center gap-5 justify-between bg-white rounded-lg shadow dark:bg-white m-4">
         <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8 sm:text-center">
           <Link href="/" className="bg-gradient-to-r from-pink-300 via-pink-500 to-green-300 bg-clip-text text-transparent text-xl font-bold">merwal</Link>
             <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
