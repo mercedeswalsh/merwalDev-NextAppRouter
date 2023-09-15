@@ -15,7 +15,7 @@ export default async function RootLayout({
   const pages = await getPages();
 
   return (
-    <html lang="en">
+    <html lang="en" className="font-mono">
       <body className="max-w-3xl mx-auto py-10">
         <header className="flex items-center justify-between">
           <Link href="/" className="bg-gradient-to-r from-pink-300 via-pink-500 to-green-300 bg-clip-text text-transparent text-lg font-bold">merwal</Link>
@@ -29,6 +29,21 @@ export default async function RootLayout({
         </header>
         <main className="py-20">{children}</main>
       </body>
+      <footer className="flex items-center gap-5 justify-between bg-white rounded-lg shadow dark:bg-gray-900 m-4">
+        <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8 sm:text-center">
+          <Link href="/" className="bg-gradient-to-r from-pink-300 via-pink-500 to-green-300 bg-clip-text text-transparent text-xl font-bold">merwal</Link>
+            <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+            <div className="flex items-center gap-5 text-sm text-gray-600 sm:text-center sm:flex sm:items-center sm:justify-between">
+              {pages.map((page) => (
+              <Link key={page._id} href={`/${page.slug}`} className="hover:underline">{page.title}</Link>
+              ))}
+            </div>
+            <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
+            
+            <span className="block text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="https://merwal.dev/" className="hover:underline">Mercedes Walsh™</a>. All Rights Reserved.</span>
+            </div>  
+        </div>
+        </footer>
     </html>
   )
 }
